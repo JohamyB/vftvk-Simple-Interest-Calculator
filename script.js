@@ -28,6 +28,13 @@ function updateRate()
 function validation()
 {
     var principal = document.getElementById("principal");
+
+    if(principal.value == ``)
+    {
+            alert("Enter a positive number.");
+             document.getElementById("principal").focus;
+            return false;
+    }
     if(principal.value != "")
     {
         //If principal is less that zero it should display a msg.
