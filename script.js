@@ -12,7 +12,7 @@ function compute()
             document.getElementById("result").innerHTML = `<br>If you deposit <mark>` + principal +`</mark>, <br>
                                                         at an interest rate of <mark>` + rate +`% </mark>. <br>
                                                         You will receive an amount of <mark>`+ interest +`</mark>, <br>
-                                                        in the year `+ year +`.`;
+                                                        in the year <mark>`+ year +`</mark>.`;
         
     }
 
@@ -27,14 +27,14 @@ function updateRate()
 
 function validation()
 {
-    var principal = document.getElementById("principal").value;
-    if(principal != "")
+    var principal = document.getElementById("principal");
+    if(principal.value != "")
     {
         //If principal is less that zero it should display a msg.
-        if(parseInt(principal) <= 0)
+        if(parseInt(principal.value) <= 0)
         {
             alert("Enter a positive number.");
-            principal.focus;
+             document.getElementById("principal").focus;
             return false;
         }
     } 
